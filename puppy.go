@@ -26,3 +26,7 @@ func PrintDogCreds(name, race string, age int) {
 	fmt.Printf("%s barks: %s", strings.ToTitle(gunnarTheDog.Name), Barks())
 	fmt.Printf("%s jumps: %s", strings.ToTitle(gunnarTheDog.Name), dog.Jump())
 }
+
+func PrintVersion() {
+	fmt.Println("Im from version 1.1.0")
+}
