@@ -2,6 +2,7 @@ package puppy
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/sondrefjellving/dog"
 )
@@ -16,12 +17,12 @@ func Barks() string {
 
 func PrintDogCreds(name, race string, age int) {
 	gunnarTheDog := dog.Dog{
-		Name: "Gunnar",
-		Race: "Chihuahua",
-		Age: 1,
+		Name: name,
+		Race: race,
+		Age: age,
 	}
 	
 	fmt.Println(dog.Dog.GetDogCredentials(gunnarTheDog))
-	fmt.Printf("%s barks: %s", gunnarTheDog.Name, Barks())
-	fmt.Printf("%s jumps: %s", gunnarTheDog.Name, dog.Jump())
+	fmt.Printf("%s barks: %s", strings.ToTitle(gunnarTheDog.Name), Barks())
+	fmt.Printf("%s jumps: %s", strings.ToTitle(gunnarTheDog.Name), dog.Jump())
 }
